@@ -11,6 +11,9 @@ import { ProjectsService } from '../projects.service';
 })
 export class PortfolioComponent implements OnInit{
 
+  isCollapsed: boolean =  true;
+  typescript = false;
+
 
  projects = {} as project[];
 
@@ -21,6 +24,17 @@ export class PortfolioComponent implements OnInit{
 
   ngOnInit(): void {
     this.projects = this.projectService.GetProjects();
+  }
+
+  filter(){
+    let filterTags: Tag[] = [];
+    if(this.typescript){
+      filterTags.push(Tag.TYPESCRIPT);
+    }
+
+
+
+    this.projects =this.projectService.GetProjectsByFilter(filterTags);
   }
 
 }

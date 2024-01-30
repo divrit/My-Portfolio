@@ -8,6 +8,7 @@ import { project } from './Model/Project';
 export class ProjectsService {
 
 
+
   projects : project[] = [
     {
         id: 0,
@@ -51,7 +52,7 @@ export class ProjectsService {
         summary: "Introduction to Fourth Framework",
         description: "Fourth Framework is a library for efficient computation, developed in C++. It's designed for high-performance computing tasks.",
         projectLink: "https://www.fourthframeworkexample.com",
-        tags: [Tag.JAVA],
+        tags: [Tag.TYPESCRIPT],
         pictures: [
           "../../../assets/neuorn2.jpg",
           "../../../assets/neuron.jpg"
@@ -101,4 +102,27 @@ export class ProjectsService {
 
     return project;
   }
+
+
+  GetProjectsByFilter(filterTags: Tag[]): project[] {
+    let filteredProjects: project[] = [];
+
+
+    this.projects.forEach( function (projects){
+      let foundAll = true;
+
+      filterTags.forEach(function(filterTags){
+        if(projects.tags.includes(filterTags) == false)
+        foundAll = false;
+      });
+
+      if(foundAll){
+        filteredProjects.push(projects);
+      }
+
+
+    });
+    return filteredProjects;
+  }
+
 }
