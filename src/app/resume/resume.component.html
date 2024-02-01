@@ -1,1 +1,135 @@
-<p>resume works!</p>
+<div class="container text-center">
+  <button (click)="downloadFile()" class="btn btn-primary mb-5 shadow border">
+    Download PDF Resume
+  </button>
+
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
+      <accordion-group>
+        <button
+          class="btn btn-block justify-content-center d-flex w-100 "
+      accordion-heading
+        >
+          <div class="btn-link">Work Experience</div>
+        </button>
+      
+
+      <div style="text-align: left">
+        <h2 class="mb-0">Software Engineer</h2>
+        <h3 class="text-primary">Cognizant Technology Solutions</h3>
+        <ul>
+          <li>
+            Led an 8-member team in Cognizant's internal project, managing
+            Angular and Spring Boot aspects. Skillfully coordinated with
+            cross-functional units, integrating Netflix OSS components for a
+            robust project architecture.
+          </li>
+          <li>
+            Designed and developed a Spring batch processing system for bulk
+            data uploads, reducing manual entry by 80%. This system efficiently
+            handles over 1 million transactions per hour, enabling swift
+            retrieval of batch responses in Excel format.
+          </li>
+          <li>
+            Engineered authorization and logging filter libraries, enhancing
+            security in Microservices. Streamlined over 10 Java-based
+            Microservices, cutting redundant development and boosting
+            operational productivity
+          </li>
+
+          <li>
+            Crafted webpages with Angular Framework to meet varied client
+            requirements at Rabobank, Netherlands, boosting the digital
+            experience for over 2.5 million users.
+          </li>
+
+          <li>
+            Leveraged Kafka Library, Liquibase scripts, and Spring Cloud
+            services to create efficient microservices. This was enhanced by a
+            message bus service, reducing latency by 30% and increasing
+            reliability by 20% for dependent applications.
+          </li>
+        </ul>
+
+        <div style="text-align: left">
+          <h2 class="mb-0">Jr. Python Developer</h2>
+          <h3 class="text-primary">Cognizant Technology Solutions</h3>
+          <ul>
+            <li>
+              Developed over 20 Python RESTful APIs leveraging Flask, now
+              integral to several organizational solutions, elevating user
+              satisfaction and process efficiency.
+            </li>
+            <li>
+              Expanded UI with infinite scroll, driving a 35% user engagement
+              surge, and deployed and managed 4 containerized applications on
+              AWS with Kubernetes.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </accordion-group>
+      <accordion-group heading="Education"> 
+
+
+        <div style="text-align: left;">
+        
+            <h2 class="mb-0"> Masters in Information Technology</h2>
+            <h3 class="text-primary">Arizona State University </h3>
+            <ul>
+                <li>Current GPA : 4.0/4.0</li>
+            </ul>
+        
+        </div>
+
+
+      </accordion-group>
+
+      <accordion-group heading="Certification"> 
+
+        <div style="text-align: left;">
+            <h3>AWS Cloud Practitioner</h3>
+          
+        </div>
+
+
+      </accordion-group>
+      <accordion-group heading="Skills"> 
+
+        <div class="row" style="text-align: left;">
+        
+            <div class="col">
+                <h3>Programming Language</h3>
+                <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>TypeScript</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Frameworks:</h3>
+                <ul>
+                        <li>Angular</li>
+                        <li>Spring Boot</li>
+                        <li>TypeScript</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Other Skills:</h3>
+                <ul>
+                        <li>Source Control Via Git</li>
+                        <li>MVC architecture</li>
+                        <li>Agile Development</li>
+                </ul>
+            </div>
+        
+        
+        
+        </div>
+
+
+
+      </accordion-group>
+    </accordion>
+  </div>
+</div>
